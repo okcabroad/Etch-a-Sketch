@@ -1,4 +1,10 @@
 const gridContainer = document.getElementById("gridContainer");
+const gridBtn = document.getElementById("gridBtn");
+
+//button event listener
+gridBtn.addEventListener('click', function() {
+    alert('button clciked')
+}
 
 
 //creating a 16 by 16 grid
@@ -19,4 +25,9 @@ function color(event) {
     event.target.style.backgroundColor = "red";
     console.log(event.target) //seeing if color function is activating
 }
+
+//button event listener
+
+
+
 
