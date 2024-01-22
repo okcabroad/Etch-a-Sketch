@@ -16,7 +16,7 @@ for (let i = 0; i < cells.length; i++){
 }
 
 function color(event) {
-    event.target.style.backgroundColor = "blue";
+    event.target.style.backgroundColor = "red";
     console.log(event.target) //seeing if color function is activating
 }
 
