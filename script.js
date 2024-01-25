@@ -66,6 +66,17 @@ function color(event) {
     const randomRed = Math.floor(Math.random() * 256);
     const randomGreen = Math.floor(Math.random() * 256);
     const randomBlue = Math.floor(Math.random() * 256);
+    // Get the current darkness level
+    const darknessLevel = event.target.darknessLevel;
+    const darkenedColor = `rgb(${Math.floor(randomRed * (1 - darknessLevel))}, 
+                                ${Math.floor(randomGreen * (1 - darknessLevel))}, 
+                                ${Math.floor(randomBlue * (1 - darknessLevel))})`;
+    // Apply the darkened color to the background
+    event.target.style.backgroundColor = darkenedColor;
+
+    // Increase the darkness level by 10% (up to a maximum of 1)
+    event.target.darknessLevel = Math.min(darknessLevel + 0.1, 1);
+    
     event.target.style.backgroundColor = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
 
 }
